@@ -1,21 +1,20 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-export const startGame = () => {
+ export const startGame = () => {
 // приветствие
   console.log('Welcome to the Brain Games!');
   const getUsername = () => readlineSync.question('May I have your name? ');
   const userName = getUsername();
   console.log(`Hello, ${userName}!`);
   // функция, генерирующая рандомное число
-  const getRandomNumber = (max) => Math.round(Math.random() * max);
+ // const getRandomNumber = (max) => Math.round(Math.random() * max);
 // условия игры <...>
   let correctAttempts = 1;
   const maxAttempts = 3;
-}
 //логика
-export const getRules = () => {
     // переменные и игра 
+    const getRules = () => {
   if (userAnswer === correctAnswer && correctAttempts < maxAttempts) {
     console.log('Correct!');
     correctAttempts += 1;
@@ -28,4 +27,7 @@ export const getRules = () => {
     // завершить игру
     break;
   }
+  }
 }
+
+
