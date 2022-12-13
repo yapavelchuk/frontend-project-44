@@ -6,7 +6,7 @@ const generateGame = () => {
   const givenNumber1 = getRandomNumber(20);
   const givenNumber2 = getRandomNumber(10);
   const progression = [];
-  const hiddenElement = getRandomNumber(givenNumber1, (progression.length - 1));
+  const hiddenElement = getRandomNumber(givenNumber1, (progression.length - 2));
   for (let i = givenNumber1; progression.length <= 9; i += givenNumber2) {
     progression.push(i);
   }
