@@ -3,8 +3,8 @@ import gameLogic from '../index.js';
 
 const gameQuestion = 'Find the greatest common divisor of given numbers.';
 const generateGame = () => {
-  const givenNumber1 = getRandomNumber(100);
-  const givenNumber2 = getRandomNumber(100);
+  const givenNumber1 = getRandomNumber(50);
+  const givenNumber2 = getRandomNumber(50);
   const findGCD = (x, y) => {
     if (y === 0) {
       return x;
