@@ -3,3 +3,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/5cd777bd46d0e56b144e/maintainability)](https://codeclimate.com/github/yapavelchuk/frontend-project-44/maintainability)
 Brain-even (https://asciinema.org/a/Hx1tb6mzbwV2C6H5QbCFtsFlo)
 Brain-calc (https://asciinema.org/a/uO4GDhZn5UZabV2PErYEjyvDH)
+Brain-gcd  (https://asciinema.org/a/e7WxmaoGn5VifJEA8EBZ2serU)
