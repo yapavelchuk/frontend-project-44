@@ -5,14 +5,15 @@ const gameQuestion = 'What number is missing in the progression?';
 const generateGame = () => {
   const givenNumber1 = getRandomNumber(20);
   const givenNumber2 = getRandomNumber(10);
+  const maxAmountofNumbers = 9;
   const progression = [];
-  const hiddenElement = getRandomNumber(givenNumber1, (progression.length - 2));
-  for (let i = givenNumber1; progression.length <= 9; i += givenNumber2) {
+  const hiddenElement = getRandomNumber(maxAmountofNumbers);
+  for (let i = givenNumber1; progression.length <= maxAmountofNumbers; i += givenNumber2) {
     progression.push(i);
   }
   const correctAnswer = progression[hiddenElement];
-  progression[hiddenElement] = '...';
-  return [progression.join(), String(correctAnswer)];
+  progression[hiddenElement] = '..';
+  return [progression.join(' '), String(correctAnswer)];
 };
 
 export default () => gameLogic(gameQuestion, generateGame);
