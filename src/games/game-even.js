@@ -8,11 +8,11 @@ const isEven = (number) => {
   }
   return false;
 };
-const generateRoundData = () => {
+const generateDataforNextRound = () => {
   const givenNumber = getRandomNumber();
   const sayEvenOrNot = (number) => (isEven(number) ? 'yes' : 'no');
   const correctAnswer = sayEvenOrNot(givenNumber);
   return [givenNumber, correctAnswer];
 };
 
-export default () => gameLogic(gameRule, generateRoundData);
+export default () => gameLogic(gameRule, generateDataforNextRound);

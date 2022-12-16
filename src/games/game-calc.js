@@ -19,7 +19,7 @@ const calculateExpressionValue = (operator, number1, number2) => {
   }
   return resultOfExpression;
 };
-const generateRoundData = () => {
+const generateDataforNextRound = () => {
   const givenNumber1 = getRandomNumber();
   const givenNumber2 = getRandomNumber();
   const minValue = 0;
@@ -31,4 +31,4 @@ const generateRoundData = () => {
   return [question, String(result)];
 };
 
-export default () => gameLogic(gameRule, generateRoundData);
+export default () => gameLogic(gameRule, generateDataforNextRound);

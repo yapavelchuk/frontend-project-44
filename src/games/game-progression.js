@@ -10,7 +10,7 @@ const createProgression = (startNumber, constSummand) => {
   }
   return progression;
 };
-const generateRoundData = () => {
+const generateDataforNextRound = () => {
   const givenNumber1 = getRandomNumber();
   const givenNumber2 = getRandomNumber();
   const lastElementofProgression = 9;
@@ -21,4 +21,4 @@ const generateRoundData = () => {
   return [resultingProgression.join(' '), String(correctAnswer)];
 };
 
-export default () => gameLogic(gameRule, generateRoundData);
+export default () => gameLogic(gameRule, generateDataforNextRound);

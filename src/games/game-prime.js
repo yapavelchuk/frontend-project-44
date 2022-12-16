@@ -13,11 +13,11 @@ const isPrime = (number) => {
   }
   return true;
 };
-const generateRoundData = () => {
+const generateDataforNextRound = () => {
   const givenNumber = getRandomNumber();
   const sayPrimeOrNot = (number) => (isPrime(number) ? 'yes' : 'no');
   const correctAnswer = sayPrimeOrNot(givenNumber);
   return [givenNumber, correctAnswer];
 };
 
-export default () => gameLogic(gameRule, generateRoundData);
+export default () => gameLogic(gameRule, generateDataforNextRound);
