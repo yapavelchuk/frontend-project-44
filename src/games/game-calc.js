@@ -26,7 +26,7 @@ const generateRoundData = () => {
   const maxValue = 2;
   const mathOperations = ['+', '-', '*'];
   const operator = mathOperations[getRandomNumber(minValue, maxValue)];
-  const question = `${givenNumber1}${operator}${givenNumber2}`;
+  const question = `${givenNumber1} ${operator} ${givenNumber2}`;
   const result = calculateExpressionValue(operator, givenNumber1, givenNumber2);
   return [question, String(result)];
 };
