@@ -1,31 +1,32 @@
 import getRandomNumber from '../utils.js';
 import gameLogic from '../index.js';
 
-const gameQuestion = 'What is the result of the expression?';
-const generateGame = () => {
-  const givenNumber1 = getRandomNumber(10);
-  const givenNumber2 = getRandomNumber(10);
+const gameRule = 'What is the result of the expression?';
+const generateRoundData = () => {
   const mathOperations = ['+', '-', '*'];
-  const getMathOperation = () => mathOperations[getRandomNumber(2)];
-  const operator = getMathOperation();
+  const operator = mathOperations[getRandomNumber(0, 2)];
+  const calculateExpressionValue = (number1, number2) => {
+    let resultOfExpression;
+    switch (operator) {
+      case '+':
+        resultOfExpression = number1 + number2;
+        break;
+      case '-':
+        resultOfExpression = number1 - number2;
+        break;
+      case '*':
+        resultOfExpression = number1 * number2;
+        break;
+      default:
+        throw new Error(`Unknown order state: '${operator}'!`);
+    }
+    return resultOfExpression;
+  };
+  const givenNumber1 = getRandomNumber();
+  const givenNumber2 = getRandomNumber();
   const question = `${givenNumber1} ${operator} ${givenNumber2}`;
-
-  let result;
-  switch (operator) {
-    case '+':
-      result = givenNumber1 + givenNumber2;
-      break;
-    case '-':
-      result = givenNumber1 - givenNumber2;
-      break;
-    case '*':
-      result = givenNumber1 * givenNumber2;
-      break;
-    default:
-      result = null;
-      break;
-  }
+  const result = calculateExpressionValue(givenNumber1, givenNumber2);
   return [question, String(result)];
 };
 
-export default () => gameLogic(gameQuestion, generateGame);
+export default () => gameLogic(gameRule, generateRoundData);

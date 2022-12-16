@@ -1,11 +1,18 @@
 import getRandomNumber from '../utils.js';
 import gameLogic from '../index.js';
 
-const gameQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
-const generateGame = () => {
-  const givenNumber = getRandomNumber(100);
-  const correctAnswer = (givenNumber % 2 === 0) ? 'yes' : 'no';
+const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
+const isEven = (number) => {
+  if (number % 2 === 0) {
+    return true;
+  }
+  return false;
+};
+const generateRoundData = () => {
+  const givenNumber = getRandomNumber();
+  const sayEvenOrNot = (number) => (isEven(number) ? 'yes' : 'no');
+  const correctAnswer = sayEvenOrNot(givenNumber);
   return [givenNumber, correctAnswer];
 };
 
-export default () => gameLogic(gameQuestion, generateGame);
+export default () => gameLogic(gameRule, generateRoundData);
