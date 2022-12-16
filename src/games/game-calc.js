@@ -2,9 +2,7 @@ import getRandomNumber from '../utils.js';
 import gameLogic from '../index.js';
 
 const gameRule = 'What is the result of the expression?';
-const calculateExpressionValue = (number1, operator, number2) => {
-  const mathOperations = ['+', '-', '*'];
-  mathOperations[getRandomNumber(0, 2)] = operator;
+const calculateExpressionValue = (operator, number1, number2) => {
   let resultOfExpression;
   switch (operator) {
     case '+':
@@ -22,12 +20,14 @@ const calculateExpressionValue = (number1, operator, number2) => {
   return resultOfExpression;
 };
 const generateRoundData = () => {
-  const mathOperations = ['+', '-', '*'];
-  const operator = mathOperations[getRandomNumber(0, 2)];
   const givenNumber1 = getRandomNumber();
   const givenNumber2 = getRandomNumber();
-  const question = `${givenNumber1} ${operator} ${givenNumber2}`;
-  const result = calculateExpressionValue(givenNumber1, operator, givenNumber2);
+  const minValue = 0;
+  const maxValue = 2;
+  const mathOperations = ['+', '-', '*'];
+  const operator = mathOperations[getRandomNumber(minValue, maxValue)];
+  const question = `${givenNumber1}${operator}${givenNumber2}`;
+  const result = calculateExpressionValue(operator, givenNumber1, givenNumber2);
   return [question, String(result)];
 };
 
