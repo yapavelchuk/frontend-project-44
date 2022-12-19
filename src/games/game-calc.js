@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils.js';
-import gameLogic from '../index.js';
+import runTheGame from '../index.js';
 
 const gameRule = 'What is the result of the expression?';
 const calculateExpressionValue = (operator, number1, number2) => {
@@ -31,4 +31,4 @@ const generateDataforNextRound = () => {
   return [question, String(result)];
 };
 
-export default () => gameLogic(gameRule, generateDataforNextRound);
+export default () => runTheGame(gameRule, generateDataforNextRound);

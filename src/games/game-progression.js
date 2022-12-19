@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils.js';
-import gameLogic from '../index.js';
+import runTheGame from '../index.js';
 
 const gameRule = 'What number is missing in the progression?';
 const createProgression = (startNumber, constSummand) => {
@@ -21,4 +21,4 @@ const generateDataforNextRound = () => {
   return [resultingProgression.join(' '), String(correctAnswer)];
 };
 
-export default () => gameLogic(gameRule, generateDataforNextRound);
+export default () => runTheGame(gameRule, generateDataforNextRound);

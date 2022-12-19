@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils.js';
-import gameLogic from '../index.js';
+import runTheGame from '../index.js';
 
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 const isEven = (number) => {
@@ -15,4 +15,4 @@ const generateDataforNextRound = () => {
   return [givenNumber, correctAnswer];
 };
 
-export default () => gameLogic(gameRule, generateDataforNextRound);
+export default () => runTheGame(gameRule, generateDataforNextRound);

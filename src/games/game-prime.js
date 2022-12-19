@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils.js';
-import gameLogic from '../index.js';
+import runTheGame from '../index.js';
 
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (number) => {
@@ -20,4 +20,4 @@ const generateDataforNextRound = () => {
   return [givenNumber, correctAnswer];
 };
 
-export default () => gameLogic(gameRule, generateDataforNextRound);
+export default () => runTheGame(gameRule, generateDataforNextRound);
