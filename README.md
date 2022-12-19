@@ -9,7 +9,7 @@
 Brain Games is a set of five math games used as a workout for one's mind.
 ## Requirements
 Node.js v19.1.0
-## Asciinema
+## Games examples
 ### Brain-even
 
 [![asciicast](https://asciinema.org/a/kxAtUlIMymdTaDqkIJBtnchSJ.svg)](https://asciinema.org/a/kxAtUlIMymdTaDqkIJBtnchSJ)
