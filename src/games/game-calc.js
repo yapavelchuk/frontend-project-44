@@ -3,21 +3,16 @@ import runTheGame from '../index.js';
 
 const gameRule = 'What is the result of the expression?';
 const calculateExpressionValue = (operator, number1, number2) => {
-  let resultOfExpression;
   switch (operator) {
     case '+':
-      resultOfExpression = number1 + number2;
-      break;
+      return number1 + number2;
     case '-':
-      resultOfExpression = number1 - number2;
-      break;
+      return number1 - number2;
     case '*':
-      resultOfExpression = number1 * number2;
-      break;
+      return number1 * number2;
     default:
       throw new Error(`Unknown order state: '${operator}'!`);
   }
-  return resultOfExpression;
 };
 const generateDataforNextRound = () => {
   const givenNumber1 = getRandomNumber();
