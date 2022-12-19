@@ -15,8 +15,7 @@ const isPrime = (number) => {
 };
 const generateDataforNextRound = () => {
   const givenNumber = getRandomNumber();
-  const sayPrimeOrNot = (number) => (isPrime(number) ? 'yes' : 'no');
-  const correctAnswer = sayPrimeOrNot(givenNumber);
+  const correctAnswer = isPrime(givenNumber) ? 'yes' : 'no';
   return [givenNumber, correctAnswer];
 };
 
