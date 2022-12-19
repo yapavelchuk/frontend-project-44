@@ -2,8 +2,7 @@ import getRandomNumber from '../utils.js';
 import runTheGame from '../index.js';
 
 const gameRule = 'What number is missing in the progression?';
-const createProgression = (startNumber, constSummand) => {
-  const numbersCount = 10;
+const createProgression = (startNumber, constSummand, numbersCount = 10) => {
   const progression = [];
   for (let i = startNumber; progression.length <= numbersCount; i += constSummand) {
     progression.push(i);
