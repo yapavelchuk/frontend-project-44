@@ -13,10 +13,10 @@ const isPrime = (number) => {
   }
   return true;
 };
-const generateDataforNextRound = () => {
+const generateNextRoundData = () => {
   const givenNumber = getRandomNumber();
   const correctAnswer = isPrime(givenNumber) ? 'yes' : 'no';
   return [givenNumber, correctAnswer];
 };
 
-export default () => runTheGame(gameRule, generateDataforNextRound);
+export default () => runTheGame(gameRule, generateNextRoundData);

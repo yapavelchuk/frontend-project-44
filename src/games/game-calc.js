@@ -14,7 +14,7 @@ const calculateExpressionValue = (operator, number1, number2) => {
       throw new Error(`Unknown order state: '${operator}'!`);
   }
 };
-const generateDataforNextRound = () => {
+const generateNextRoundData = () => {
   const givenNumber1 = getRandomNumber();
   const givenNumber2 = getRandomNumber();
   const minValue = 0;
@@ -26,4 +26,4 @@ const generateDataforNextRound = () => {
   return [question, String(result)];
 };
 
-export default () => runTheGame(gameRule, generateDataforNextRound);
+export default () => runTheGame(gameRule, generateNextRoundData);

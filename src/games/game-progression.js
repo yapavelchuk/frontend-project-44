@@ -9,7 +9,7 @@ const createProgression = (startNumber, constSummand, numbersCount = 10) => {
   }
   return progression;
 };
-const generateDataforNextRound = () => {
+const generateNextRoundData = () => {
   const givenNumber1 = getRandomNumber();
   const givenNumber2 = getRandomNumber();
   const lastElementofProgression = 9;
@@ -20,4 +20,4 @@ const generateDataforNextRound = () => {
   return [resultingProgression.join(' '), String(correctAnswer)];
 };
 
-export default () => runTheGame(gameRule, generateDataforNextRound);
+export default () => runTheGame(gameRule, generateNextRoundData);

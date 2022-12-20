@@ -8,7 +8,7 @@ const findGCD = (x, y) => {
   }
   return findGCD(y, x % y);
 };
-const generateDataforNextRound = () => {
+const generateNextRoundData = () => {
   const givenNumber1 = getRandomNumber();
   const givenNumber2 = getRandomNumber();
   const givenNumber = `${givenNumber1} ${givenNumber2}`;
@@ -16,4 +16,4 @@ const generateDataforNextRound = () => {
   return [givenNumber, String(correctAnswer)];
 };
 
-export default () => runTheGame(gameRule, generateDataforNextRound);
+export default () => runTheGame(gameRule, generateNextRoundData);
