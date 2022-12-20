@@ -2,7 +2,7 @@ import getRandomNumber from '../utils.js';
 import runTheGame from '../index.js';
 
 const gameRule = 'What is the result of the expression?';
-const calculateExpressionValue = (operator, number1, number2) => {
+const calculateExpression = (operator, number1, number2) => {
   switch (operator) {
     case '+':
       return number1 + number2;
@@ -22,7 +22,7 @@ const generateNextRoundData = () => {
   const mathOperations = ['+', '-', '*'];
   const operator = mathOperations[getRandomNumber(minValue, maxValue)];
   const question = `${givenNumber1} ${operator} ${givenNumber2}`;
-  const result = calculateExpressionValue(operator, givenNumber1, givenNumber2);
+  const result = calculateExpression(operator, givenNumber1, givenNumber2);
   return [question, String(result)];
 };
 
