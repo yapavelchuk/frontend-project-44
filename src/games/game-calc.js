@@ -17,9 +17,9 @@ const calculateExpression = (operator, number1, number2) => {
 const generateNextRoundData = () => {
   const givenNumber1 = getRandomNumber();
   const givenNumber2 = getRandomNumber();
-  const minValue = 0;
-  const maxValue = 2;
   const mathOperations = ['+', '-', '*'];
+  const minValue = 0;
+  const maxValue = mathOperations.length - 1;
   const operator = mathOperations[getRandomNumber(minValue, maxValue)];
   const question = `${givenNumber1} ${operator} ${givenNumber2}`;
   const result = calculateExpression(operator, givenNumber1, givenNumber2);
